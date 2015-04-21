@@ -19,7 +19,6 @@ val (trainingData, parsedData) = (splits(0), splits(1))
 val maxDepth = 5
 val model = DecisionTree.train(trainingData, Classification, Entropy, maxDepth)
 
-pwd
 val labelAndPreds = parsedData.map { point =>
   val prediction = model.predict(point.features)
   (point.label, prediction)
