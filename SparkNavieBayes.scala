@@ -8,6 +8,7 @@ import org.apache.spark.mllib.classification.NaiveBayes
 
 // Load and parse the data file
 val tData = sc.textFile("hdfs://129.207.46.225:8020/mlclass/v100k.csv")
+//val tData = sc.textFile("hdfs://129.207.46.225:8020/mlclass/v100knew.csv")
 val trainningData = tData.filter(line => !line.contains("%")).map { line =>
   val parts = line.split(',').map(_.toDouble)
   LabeledPoint(parts(3), Vectors.dense(parts.take(3)))
