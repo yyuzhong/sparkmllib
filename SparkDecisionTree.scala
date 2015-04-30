@@ -5,6 +5,8 @@ import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.tree.configuration.Algo._
 import org.apache.spark.mllib.tree.impurity.Entropy
 
+val before = Calendar.getInstance().getTime();
+
 // Load and parse the data file
 val inputData = sc.textFile("hdfs://129.207.46.225:8020/mlclass/ladygaga.csv")
 val mldata = inputData.filter(line => !line.contains("%")).map { line =>
@@ -29,3 +31,4 @@ val labelAndPreds = mldata.map { point =>
 val trainErr = labelAndPreds.filter(r => r._1 != r._2).count.toDouble / mldata.count
 println("Training Error = " + trainErr)
 
+val after = Calendar.getInstance().getTime();
