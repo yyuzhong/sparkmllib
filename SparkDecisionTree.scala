@@ -4,6 +4,7 @@ import org.apache.spark.mllib.regression.LabeledPoint
 import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.tree.configuration.Algo._
 import org.apache.spark.mllib.tree.impurity.Entropy
+import java.util.{Calendar, Date}
 
 val before = Calendar.getInstance().getTime();
 
