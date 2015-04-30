@@ -2,4 +2,4 @@ https://spark.apache.org/docs/latest/spark-standalone.html
 
 /opt/cscloud/spark-latest/bin/spark-shell --master spark://129.207.46.225:7077 --total-executor-cores 224
 
-/opt/cscloud/spark-latest/bin/spark-shell --master local[1] --total-executor-cores 224
+/opt/cscloud/spark-latest/bin/spark-shell --master local[1]
