@@ -1,5 +1,8 @@
+/*Spark Intro.*/
 https://spark.apache.org/docs/latest/spark-standalone.html
 
+/*Run Spark in Parallel, you can change the number of cores. The number of cores greater that 8 is not recommended, since our dataset is only 1GB, which will be split into 8 partitions at most.*/
 /opt/cscloud/spark-latest/bin/spark-shell --master spark://129.207.46.225:7077 --total-executor-cores 8
 
+/*Run Spark locally*/
 /opt/cscloud/spark-latest/bin/spark-shell --master local[1]
